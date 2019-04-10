@@ -1,0 +1,14 @@
+import math
+
+def cut_fruits(fruits):
+    # FRUIT_NAMES is preloded
+  cut_fruits = []
+  for f in range(0,len(fruits)):
+    if fruits[f] in FRUIT_NAMES:
+      n = 0
+      n = int(math.ceil(len(fruits[f])/2))
+      cut_fruits.append(fruits[f][0:n])
+      cut_fruits.append(fruits[f][n:len(fruits[f])])
+    else:
+      cut_fruits.append(fruits[f])
+  return cut_fruits
